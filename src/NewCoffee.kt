@@ -41,9 +41,7 @@ class CoffeeMachine {
         run("START")
     }
 
-    fun on(): Boolean {
-        return currentState != CurrentState.EXIT
-    }
+    fun on() = currentState != CurrentState.EXIT
 
     private fun reset() {
         currentState = CurrentState.START
@@ -56,9 +54,7 @@ class CoffeeMachine {
         )
     }
 
-    private fun checkNum(strPassed: String): Boolean {
-        return strPassed.toIntOrNull() != null
-    }
+    private fun checkNum(strPassed: String) = strPassed.toIntOrNull() != null
 
     private fun getCoffee(drink: DRINK) {
         when {
