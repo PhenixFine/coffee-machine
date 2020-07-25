@@ -1,12 +1,10 @@
 import java.util.*
 
-fun getString(): String {
-    val scanner = Scanner(System.`in`)
-    return (scanner.nextLine().toUpperCase())
-}
-
 fun main() {
+    val scanner = Scanner(System.`in`)
+    val getString = { scanner.nextLine().toLowerCase() }
     val coffee = CoffeeMachine()
+
     coffee.start()
     while (coffee.on()) coffee.run(getString())
 }
